@@ -24,15 +24,10 @@ Route::get('/blog/category/{cat}', [HomeController::class, 'searchByCats'])->nam
 |--------------------------------------------------------------------------
 */
 Route::get('/auth/login', [AuthController::class, 'loginPage'])->name('login');
-/*
 Route::post('/user/login', [AuthController::class, 'login'])->name('login');
-
 Route::get('/user/signup', [AuthController::class, 'signupPage'])->name('signup');
 Route::post('/user/signup', [AuthController::class, 'create'])->name('signup');
-*/
-
 Route::put('/auth/update', [AuthController::class, 'update'])->name('user-update');
-
 Route::get('/auth/logout', [AuthController::class, 'logout'])->name('logout');
 
 /*
@@ -48,7 +43,10 @@ Route::get('/auth/google/redirect', [SocialiteController::class, 'handleProvider
 | Cpanel Routes
 |--------------------------------------------------------------------------
 */
-$url = '/abdev/admin';
+$url = '/admin';
+// Rutas Auth
+Route::get($url.'/login', [AuthController::class, 'loginPage'])->name('cpanel-login');
+
 Route::get($url, [CpanelController::class, 'index'])->name('cpanel');
 Route::get($url.'/create', [CpanelController::class, 'create'])->name('cpanel-create');
 Route::get($url.'/posts', [CpanelController::class, 'posts'])->name('cpanel-posts');

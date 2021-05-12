@@ -12,7 +12,7 @@ class CpanelController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /*
     *@ Render cpanel dashboard page
     */
@@ -48,7 +48,7 @@ class CpanelController extends Controller
     public function categories()
     {
         $cats = Category::orderBy('created_at', 'desc')->get();
-        
+
         return view('cpanel.pages.categories', compact('cats'));
     }
 

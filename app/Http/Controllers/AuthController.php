@@ -11,9 +11,9 @@ class AuthController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['only' => ['login', 'logout', 'update', 'create']]);
+        //$this->middleware('auth', ['only' => ['login', 'logout', 'update', 'create']]);
     }
-    
+
     /*
     *@ Render login page
     */
@@ -43,19 +43,20 @@ class AuthController extends Controller
     */
     public function create(Request $request)
     {
+        $password = Hash::make($request->password);
     	$request->validate([
     		'username' 	=> 'required|min:5',
     		'email' 	=> 'required|email|unique:users,email',
-    		'password' 	=> 'required|min:6|max:20',
+    		'password' 	=> 'required',
     	]);
 
     	User::create([
     		'name'  	=> $request->username,
     		'email'  	=> $request->email,
-    		'password'  => Hash::make($request->password),
+    		'password'  => $password,
     	]);
 
-    	return redirect()->route('login')->withSuccess('user created successfully ...');
+    	return redirect()->route('cpanel-login')->withSuccess('user created successfully ...');
     }
 
     /*
@@ -71,16 +72,7 @@ class AuthController extends Controller
     	if(Auth::attempt($request->only('email', 'password'), $request->remember)) {
     		return redirect()->route('cpanel');
     	} else {
-    		$user = User::where('email', '=', $request->email);
-
-    		if(!$user->value('email')) {
-    			return redirect()->back()->with('error', 'invalid email address');
-    		}
-
-    		$password = Hash::check($user->value('password'), $request->password);
-    		if(!$password) {
-    			return redirect()->back()->with('error', 'password is incorrect');
-    		}
+    		return redirect()->back()->with('error', 'Correo o contraseña incorrectos');
     	}
     }
 
