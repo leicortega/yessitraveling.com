@@ -33,7 +33,7 @@
 				@endforeach
 
 				@if ($cats->count() <= 0)
-					<div class="alert alert-info text-capitalize rounded-0">no categories are found</div>
+					<div class="alert alert-info text-capitalize rounded-0">No tienes niguna categoria ...</div>
 				@endif
 			</ul>
 		</div>

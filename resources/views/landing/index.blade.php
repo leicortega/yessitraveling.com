@@ -222,7 +222,7 @@
                 <div class="col-lg-12">
                 <div class="widget-sidebar about-me">
                     <div class="widget-header">
-                    <h4>About Me</h4>
+                    <h4>Acerca de</h4>
                     </div>
                     <div class="widget-content">
                     <img src="http://placehold.it/310x200" alt="">
@@ -230,10 +230,8 @@
                     <h6>Shareen Robertson</h6>
                     <ul class="social-icons">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
                     </ul>
                     </div>
                 </div>
@@ -241,7 +239,7 @@
                 <div class="col-lg-12">
                 <div class="widget-sidebar promo-post">
                     <div class="widget-header">
-                    <h4>Promo Post</h4>
+                    <h4>Promoción</h4>
                     </div>
                     <div class="widget-content">
                     <div class="promo-image">
@@ -249,7 +247,7 @@
                         <div class="inner-content">
                         <p>Franzen tumeric sriracha and quinoa next level kinfolk cronut.</p>
                         <div class="normal-white-button">
-                            <a href="#">Read More</a>
+                            <a href="#">ver mas</a>
                         </div>
                         </div>
                     </div>
@@ -280,7 +278,7 @@
                 <div class="col-lg-12">
                 <div class="widget-sidebar latest-posts">
                     <div class="widget-header">
-                    <h4>Latest Posts</h4>
+                    <h4>Ultimas publicaciones</h4>
                     </div>
                     <div class="widget-content">
                     <ul class="latest-post-list">
@@ -327,7 +325,7 @@
                 <div class="col-lg-12">
                 <div class="widget-sidebar categories">
                     <div class="widget-header">
-                    <h4>Categories</h4>
+                    <h4>Categorias</h4>
                     </div>
                     <div class="widget-content">
                     <ul class="categories">
@@ -340,7 +338,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="col-lg-12">
+                {{-- <div class="col-lg-12">
                 <div class="widget-sidebar tags-cloud">
                     <div class="widget-header">
                     <h4>Tags Cloud</h4>
@@ -361,7 +359,7 @@
                     </ul>
                     </div>
                 </div>
-                </div>
+                </div> --}}
             </div>
             </div>
         </div>

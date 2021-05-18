@@ -28,17 +28,17 @@
         <div class="mobile-nav-wrapper">
             <div class="mobile-menu-inner">
                 <ul class="mobile-menu">
-                <li class="has-sub"><a href="#">Home <i class="sub-icon fa fa-angle-down"></i></a>
-                    <ul class="sub-menu">
+                <li class="has-sub"><a href="#">Inicio</a>
+                    {{-- <ul class="sub-menu">
                     <li><a href="index.html">Standard Posts</a></li>
                     <li><a href="home-recent.html">Recent Posts</a></li>
                     <li><a href="home-masonry.html">Masonry Posts</a></li>
                     <li><a href="home-list.html">List Posts</a></li>
                     <li><a href="home-full-width.html">Full Width Posts</a></li>
                     <li><a href="home-without-sidebar.html">Without Sidebar</a></li>
-                    </ul>
+                    </ul> --}}
                 </li>
-                <li class="has-sub"><a href="#">Sliders <i class="sub-icon fa fa-angle-down"></i></a>
+                {{-- <li class="has-sub"><a href="#">Sliders <i class="sub-icon fa fa-angle-down"></i></a>
                     <ul class="sub-menu">
                     <li><a href="slider-boxed.html">Boxed Slider</a></li>
                     <li><a href="slider-full-width.html">Full Width Slider</a></li>
@@ -46,9 +46,9 @@
                     <li><a href="slider-small.html">Three Big Posts</a></li>
                     <li><a href="slider-infinity.html">Infinity Scroll</a></li>
                     </ul>
-                </li>
-                <li><a href="pages-about-me-v1.html">About</a></li>
-                <li class="has-sub"><a href="#">Pages <i class="sub-icon fa fa-angle-down"></i></a>
+                </li> --}}
+                <li><a href="#">Tienda</a></li>
+                {{-- <li class="has-sub"><a href="#">Pages <i class="sub-icon fa fa-angle-down"></i></a>
                     <ul class="sub-menu">
                     <li><a href="pages-left-sidebar.html">Left Sidebar</a></li>
                     <li><a href="pages-right-sidebar.html">Right Sidebar</a></li>
@@ -60,9 +60,9 @@
                     <li><a href="pages-error-404.html">Error Page 404</a></li>
                     <li><a href="pages-coming-soon.html">Coming Soon Page</a></li>
                     </ul>
-                </li>
-                <li class="has-sub"><a href="#">Posts <i class="sub-icon fa fa-angle-down"></i></a>
-                    <ul class="sub-menu">
+                </li> --}}
+                <li class="has-sub"><a href="#">Blog</a>
+                    {{-- <ul class="sub-menu">
                     <li><a href="single-standard-post.html">Standard Post</a></li>
                     <li><a href="single-audio-post.html">Audio Post</a></li>
                     <li><a href="single-video-post.html">Video Post</a></li>
@@ -71,9 +71,9 @@
                     <li><a href="single-post-left-sidebar.html">Left Sidebar Post</a></li>
                     <li><a href="single-post-right-sidebar.html">Right Sidebar Post</a></li>
                     <li><a href="single-post-without-sidebar.html">Without Sidebar Post</a></li>
-                    </ul>
+                    </ul> --}}
                 </li>
-                <li><a href="pages-contact-me-v2.html">Contact Us</a></li>
+                <li><a href="#">Contácto</a></li>
                 </ul>
             </div>
         </div>
@@ -103,7 +103,7 @@
                     <div class="instagram-account">
                     <div class="widget-content">
                         <div class="widget-header">
-                        <h4><a href="#">@shareenBlog</a></h4>
+                        <h4><a href="#">@yessitraveling</a></h4>
                         </div>
                         <div class="row">
                         <div class="col-lg-3">

@@ -23,7 +23,7 @@ Route::get('/blog/category/{cat}', [HomeController::class, 'searchByCats'])->nam
 | Auth Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/auth/login', [AuthController::class, 'loginPage'])->name('login');
+Route::get('/auth/login', [AuthController::class, 'loginPage'])->name('auth.login');
 Route::post('/user/login', [AuthController::class, 'login'])->name('login');
 Route::get('/user/signup', [AuthController::class, 'signupPage'])->name('signup');
 Route::post('/user/signup', [AuthController::class, 'create'])->name('signup');

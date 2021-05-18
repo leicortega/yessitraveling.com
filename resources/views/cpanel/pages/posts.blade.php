@@ -43,24 +43,24 @@
 				<!-- read more link -->
 				<div class="actions d-flex align-items-center mt-3">
 					{{-- read --}}
-					<a href="" class="read-more text-capitalize d-flex align-items-center justify-content-center text-decoration-none">read</a>
+					<a href="" class="read-more text-capitalize d-flex align-items-center justify-content-center text-decoration-none">ver</a>
 
 					{{-- update --}}
-					<a href="{{ route('cpanel-posts-update', ['id' => $post->id]) }}" class="update text-capitalize d-flex align-items-center justify-content-center text-decoration-none mx-2">update</a>
+					<a href="{{ route('cpanel-posts-update', ['id' => $post->id]) }}" class="update text-capitalize d-flex align-items-center justify-content-center text-decoration-none mx-2">actualizar</a>
 
 					{{-- delete --}}
 					<form action="{{ route('cpanel-posts-delete', ['id' => $post->id]) }}" method="POST" class="delete-form">
 						@method('DELETE')
 						@csrf
 						
-						<button class="btn text-capitalize d-flex align-items-center justify-content-center">delete</button>
+						<button class="btn text-capitalize d-flex align-items-center justify-content-center">eliminar</button>
 					</form>
 				</div>
 			</article>
 			@endforeach
 
 			@if ($posts->count() <= 0)
-			<div class="alert alert-info text-capitalize rounded-0">no posts are found ...</div>
+			<div class="alert alert-info text-capitalize rounded-0">No tienes ningún post ...</div>
 			@endif
 		</div>
 	</section>
