@@ -26,7 +26,7 @@ class PostsController extends Controller
 
     	$post 					= new Post();
     	$post->title 			= $request->title;
-    	$post->author 			= 'abdou';
+    	$post->author 			= auth()->user()->name;
     	$post->slug 			= Str::slug($request->title, '-');
     	$post->post_category 	= $request->post_category;
     	$post->image 			= '0';
@@ -50,7 +50,7 @@ class PostsController extends Controller
 
     	$post->save();
 
-    	return redirect()->route('cpanel-posts')->withSuccess('post created successfully ...');
+    	return redirect()->route('cpanel-posts')->withSuccess('post creado correctamente ...');
     }
 
     /*
@@ -68,7 +68,7 @@ class PostsController extends Controller
 
     	$post->delete();
 
-    	return redirect()->route('cpanel-posts')->withSuccess('post deleted successfully ...');
+    	return redirect()->route('cpanel-posts')->withSuccess('post eliminado ...');
     }
 
     /*
@@ -123,6 +123,6 @@ class PostsController extends Controller
 
     	$post->update(['id', $post->id]);
 
-    	return redirect()->route('cpanel-posts')->withSuccess('post updated successfully ...');
+    	return redirect()->route('cpanel-posts')->withSuccess('post actualizado correctamente ...');
     }
 }

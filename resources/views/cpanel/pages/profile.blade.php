@@ -9,11 +9,11 @@
 			{{-- user information --}}
 			<ul class="list-group">
 				<li class="list-group-item d-flex align-items-center justify-content-between">
-					<span class="text-capitalize">name</span>
+					<span class="text-capitalize">Nombre</span>
 					<span class="text-capitalize">{{ auth()->user()->name }}</span>
 				</li>
 				<li class="list-group-item d-flex align-items-center justify-content-between">
-					<span class="text-capitalize">email</span>
+					<span class="text-capitalize">Correo electronico</span>
 					<span>{{ auth()->user()->email }}</span>
 				</li>
 			</ul>

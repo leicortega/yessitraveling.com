@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CpanelController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\Landing\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,10 @@ use App\Http\Controllers\CategoriesController;
 |--------------------------------------------------------------------------
 */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/post/{slug}', [HomeController::class, 'post'])->name('post');
 Route::post('/blog/search', [HomeController::class, 'search'])->name('search-post');
 Route::get('/blog/category/{cat}', [HomeController::class, 'searchByCats'])->name('search-post-by-cats');
-
 /*
 |--------------------------------------------------------------------------
 | Auth Routes

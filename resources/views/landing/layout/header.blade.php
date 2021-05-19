@@ -35,7 +35,7 @@
         </div>
         <div class="header-nav">
             <ul class="main-menu">
-                <li class="menu-item-has-children active"><a href="#">Inicio</a>
+                <li class="menu-item-has-children {{request()->routeIs('home*') ? 'active' : ''}}"><a href="{{route('home')}}">Inicio</a>
                 {{-- <ul class="sub-menu">
                     <li><a href="/">Standard Posts</a></li>
                     <li><a href="home-recent.html">Recent Posts</a></li>
@@ -68,7 +68,7 @@
                     <li><a href="pages-coming-soon.html">Coming Soon Page</a></li>
                 </ul>
                 </li> --}}
-                <li class="menu-item-has-children"><a href="#">Blog</a>
+                <li class="menu-item-has-children {{request()->routeIs('blog*') ? 'active' : ''}}"><a href="{{route('blog')}}">Blog</a>
                 {{-- <ul class="sub-menu">
                     <li><a href="single-standard-post.html">Standard Post</a></li>
                     <li><a href="single-audio-post.html">Audio Post</a></li>

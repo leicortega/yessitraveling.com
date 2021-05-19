@@ -28,7 +28,7 @@
         <div class="mobile-nav-wrapper">
             <div class="mobile-menu-inner">
                 <ul class="mobile-menu">
-                <li class="has-sub"><a href="#">Inicio</a>
+                <li class="has-sub"><a href="{{route('home')}}">Inicio</a>
                     {{-- <ul class="sub-menu">
                     <li><a href="index.html">Standard Posts</a></li>
                     <li><a href="home-recent.html">Recent Posts</a></li>
@@ -61,7 +61,7 @@
                     <li><a href="pages-coming-soon.html">Coming Soon Page</a></li>
                     </ul>
                 </li> --}}
-                <li class="has-sub"><a href="#">Blog</a>
+                <li class="has-sub"><a href="{{route('blog')}}">Blog</a>
                     {{-- <ul class="sub-menu">
                     <li><a href="single-standard-post.html">Standard Post</a></li>
                     <li><a href="single-audio-post.html">Audio Post</a></li>
