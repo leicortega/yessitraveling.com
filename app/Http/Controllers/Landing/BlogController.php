@@ -13,4 +13,15 @@ class BlogController extends Controller
         // return dd($posts);
         return view('landing.blog.index', ['posts' => $posts]);
     }
+
+    //------------------------------
+    //|    ver post 
+    //------------------------------
+
+    public function show_post($slug){
+        $post = Post::where('slug', '=', $slug)->firstOrFail();
+        $latest_post = Post::latest()->take(3)->get();
+        // return dd($post);
+        return view('landing.blog.ver', compact('post', 'latest_post'));
+    }
 }

@@ -80,7 +80,7 @@
                     <li><a href="single-post-without-sidebar.html">Without Sidebar Post</a></li>
                 </ul> --}}
                 </li>
-                <li><a href="#">Contácto</a></li>
+                <li class="{{request()->routeIs('contacto*') ? 'active' : ''}}"><a href="{{route('contacto')}}">Contácto</a></li>
             </ul>
         </div>
         <div class="header-widgets">

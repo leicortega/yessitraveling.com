@@ -8,6 +8,7 @@ use App\Http\Controllers\CpanelController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\Landing\BlogController;
+use App\Http\Controllers\Landing\ContactoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,11 @@ use App\Http\Controllers\Landing\BlogController;
 */
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-Route::get('/blog/post/{slug}', [HomeController::class, 'post'])->name('post');
+Route::get('/blog/post/{slug}', [BlogController::class, 'show_post'])->name('post');
+// Route::get('/blog/post', [BlogController::class, 'show_post'])->name('post');
 Route::post('/blog/search', [HomeController::class, 'search'])->name('search-post');
 Route::get('/blog/category/{cat}', [HomeController::class, 'searchByCats'])->name('search-post-by-cats');
+Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto');
 /*
 |--------------------------------------------------------------------------
 | Auth Routes

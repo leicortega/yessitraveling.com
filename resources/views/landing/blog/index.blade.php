@@ -17,15 +17,14 @@
                                                     alt="370x305"></a>
                                         </div>
                                         <div class="down-content">
-                                            <a href="#">
+                                            <a href="{{route('post', $post->slug)}}">
                                                 <h4>{{$post->title}}</h4>
                                             </a>
                                             <ul class="post-info">
-                                                <li><a href="#">{{ $post->created_at->diffForHumans() }}</a></li>
+                                                <li><a href="#">{{ $post->created_at->toFormattedDateString() }}</a></li>
                                                 <li><a href="#">{{$post->author}}</a></li>
                                             </ul>
-                                            <p>Bushwick fam PBRB master cleanse post-ironic. Craft beer fest ethical forage four
-                                                family craft fanny pack.</p>
+                                            <?php echo substr($post->body, 0, 150)." ..."; ?>
                                         </div>
                                     </div>
                                 </div>
