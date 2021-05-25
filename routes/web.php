@@ -18,7 +18,7 @@ use App\Http\Controllers\Landing\ContactoController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/post/{slug}', [BlogController::class, 'show_post'])->name('post');
-// Route::get('/blog/post', [BlogController::class, 'show_post'])->name('post');
+Route::post('/blog/post/{slug}/comentar', [BlogController::class, 'comentar'])->name('post.comentar');
 Route::post('/blog/search', [HomeController::class, 'search'])->name('search-post');
 Route::get('/blog/category/{cat}', [HomeController::class, 'searchByCats'])->name('search-post-by-cats');
 Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto');

@@ -52,9 +52,9 @@
                                             <div class="col-lg-12 col-md-6">
                                                 <ul class="share-post">
                                                     <li><i class="fa fa-share-alt"></i></li>
-                                                    <li><a href="#">Facebook</a>,</li>
-                                                    <li><a href="#">Twitter</a>,</li>
-                                                    <li><a href="#">Instagram</a></li>
+                                                    <li><a href="https://www.facebook.com/sharer/sharer.php?u={{request()->fullUrl()}}&title={{$post->title}}">Facebook</a>,</li>
+                                                    <li><a href="https://twitter.com/intent/tweet?url={{request()->fullUrl()}}&text={{$post->title}}&via={{config('app.name', 'TexvnOnline')}}&hashtags={{config('app.name', 'TexvnOnline')}}">Twitter</a></li>
+                                                    {{-- <li><a href="https://www.pinterest.com/pin/create/button/?url={{request()->fullUrl()}}&media={{$post->image}}">Pinterest</a></li> --}}
                                                 </ul>
                                             </div>
                                         </div>
@@ -65,21 +65,23 @@
                             <div class="col-lg-12">
                                 <div class="widget-post comments">
                                     <div class="widget-header">
-                                        <h4>3 Comentarios</h4>
+                                        <h4>{{$post->comments->count()}} Comentarios</h4>
                                     </div>
                                     <div class="widget-content">
                                         <ul class="comments">
-                                            <li>
-                                                <div class="comment-author-image">
-                                                    <img src="http://placehold.it/90x90" alt="">
-                                                </div>
-                                                <div class="right-content">
-                                                    <h6>Robert Imeri <span>January 10, 2020</span></h6>
-                                                    {{-- <a class="reply-button">Respuestas</a> --}}
-                                                    <p>Franzen tumeric sriracha and quinoa goard next level. Cold-pressed
-                                                        kinfolk cronut short ditch freegan kistrater selfies.</p>
-                                                </div>
-                                            </li>
+                                            @foreach ($post->comments as $comentario)
+                                                <li>
+                                                    <div class="comment-author-image">
+                                                        <img src="http://placehold.it/90x90" alt="">
+                                                    </div>
+                                                    <div class="right-content">
+                                                        <h6>{{$comentario->nombre}} <span>{{$comentario->created_at->toFormattedDateString()}}</span></h6>
+                                                        {{-- <a class="reply-button">Respuestas</a> --}}
+                                                        <?php echo $comentario->comentario; ?>
+                                                    </div>
+                                                </li>
+                                            @endforeach
+                                            
 
                                             {{-- <li class="replied">
                                                 <div class="comment-author-image">
@@ -93,17 +95,17 @@
                                                 </div>
                                             </li> --}}
 
-                                            <li>
+                                            {{-- <li>
                                                 <div class="comment-author-image">
                                                     <img src="http://placehold.it/90x90" alt="">
                                                 </div>
                                                 <div class="right-content">
                                                     <h6>Antonio Matters <span>January 09, 2020</span></h6>
-                                                    {{-- <a href="#" class="reply-button">Respuestas</a> --}}
+                                                    
                                                     <p>Franzen tumeric sriracha and quinoa goard next level. Cold-pressed
                                                         kinfolk cronut short ditch freegan kistrater selfies.</p>
                                                 </div>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </div>
                                 </div>
@@ -116,7 +118,8 @@
                                     </div>
                                     <div class="widget-content">
                                         <div class="contact-form">
-                                            <form id="contact" action="#" method="post">
+                                            <form  action="/blog/post/{{$post->slug}}/comentar" id="contact" method="POST" enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-12 col-sm-12">
                                                         <fieldset>
@@ -128,7 +131,7 @@
                                                         <fieldset>
                                                             <input name="email" type="text" class="form-control" id="email"
                                                                 pattern="[^ @]*@[^ @]*"
-                                                                placeholder="Tu correo electronico..." required>
+                                                                placeholder="Tu correo electronico...">
                                                         </fieldset>
                                                     </div>
                                                     <div class="col-lg-12">
@@ -137,10 +140,11 @@
                                                                 id="message" placeholder="Escribe tu comentario..."
                                                                 required></textarea>
                                                         </fieldset>
+                                                        <input type="hidden" name="post_id" value="{{$post->id}}">
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <fieldset>
-                                                            <button type="submit" id="form-submit"
+                                                            <button type="submit" id="form-submit" onclick="this.form.submit()"
                                                                 class="filled-button">Comentar post</button>
                                                         </fieldset>
                                                     </div>
