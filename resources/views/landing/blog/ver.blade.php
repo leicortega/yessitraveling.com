@@ -39,7 +39,7 @@
                                             cray shoreditch freegan kickstarter selfies. Migas mumblecore semiotics neutra
                                             everyday carry green juice dreamcheater vegans model.</p>
                                         <div class="row">
-                                            <div class="col-lg-7 col-md-6">
+                                            {{-- <div class="col-lg-7 col-md-6">
                                                 <div class="tags">
                                                     <ul class="tags">
                                                         <li><i class="fa fa-tag"></i></li>
@@ -48,8 +48,8 @@
                                                         <li><a href="#">Lifestyle</a></li>
                                                     </ul>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-5 col-md-6">
+                                            </div> --}}
+                                            <div class="col-lg-12 col-md-6">
                                                 <ul class="share-post">
                                                     <li><i class="fa fa-share-alt"></i></li>
                                                     <li><a href="#">Facebook</a>,</li>
@@ -166,9 +166,9 @@
                                         <ul class="latest-post-list">
                                             @foreach ($latest_post as $posts)
                                                 <li>
-                                                    <a href="single-standard-post.html">
+                                                    <a href="{{route('post', $posts->slug)}}">
                                                         <div class="left-image">
-                                                            <img src="/files/images/{{ $post->image }}" alt="" width="80" height="80">
+                                                            <img src="/files/images/{{ $posts->image }}" alt="" width="80" height="80">
                                                             <span>9</span>
                                                         </div>
                                                         <div class="right-content">

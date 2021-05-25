@@ -13,7 +13,7 @@
                                 <div class="col-lg-4">
                                     <div class="standard-post recent-post">
                                         <div class="post-image">
-                                            <a href="#"><img src="/files/images/{{$post->image}}" width="370" height="305"
+                                            <a href="{{route('post', $post->slug)}}"><img src="/files/images/{{$post->image}}" width="370" height="305"
                                                     alt="370x305"></a>
                                         </div>
                                         <div class="down-content">
