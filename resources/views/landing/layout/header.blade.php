@@ -3,9 +3,9 @@
         <div class="row">
         <div class="col-lg-4 align-self-center">
             <ul class="social-icons">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/yessitraveling" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/yessitraveling/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/yessitraveling" target="_blank"><i class="fa fa-twitter"></i></a></li>
             {{-- <li><a href="#"><i class="fa fa-behance"></i></a></li> --}}
             </ul>
         </div>

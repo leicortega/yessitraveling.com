@@ -73,13 +73,14 @@
                             <h4>Quien soy</h4>
                         </div>
                         <div class="widget-content">
-                            <img src="http://placehold.it/310x180" alt="">
-                            <p>Franzen tumeric sriracha and quinoa goard next level. Cold-pressed kinfolk.</p>
-                            <h6>Shareen Robertson</h6>
+                            <img src="{{asset('assets/images/perfil/yessi.jpg')}}" alt="" width="150" height="150" style="width: auto">
+                            {{-- width="310" height="180" --}}
+                            <p>Viajo bajo las alas de Dios, exaltando nuestro territorio.</p>
+                            <h6>Yessica Vargas V.</h6>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/yessitraveling"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/yessitraveling"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/yessitraveling/"><i class="fa fa-instagram"></i></a></li>
                                 {{-- <li><a href="#"><i class="fa fa-rss"></i></a></li>
                                 <li><a href="#"><i class="fa fa-behance"></i></a></li> --}}
                             </ul>

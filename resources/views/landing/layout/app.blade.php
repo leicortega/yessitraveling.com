@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        @include('landing.layout.head')
-    </head>
-    <body>
 
-        <div id="js-preloader" class="js-preloader">
+<head>
+    @include('landing.layout.head')
+</head>
+
+<body>
+
+    <div id="js-preloader" class="js-preloader">
         <div class="cp-preloader cp-preloader_type1">
             <span class="cp-preloader__letter" data-preloader="Y">Y</span>
             <span class="cp-preloader__letter" data-preloader="E">E</span>
@@ -22,13 +24,13 @@
             <span class="cp-preloader__letter" data-preloader="N">N</span>
             <span class="cp-preloader__letter" data-preloader="G">G</span>
         </div>
-        </div>
+    </div>
 
-        <!-- Mobile Menu -->
-        <div class="mobile-nav-wrapper">
-            <div class="mobile-menu-inner">
-                <ul class="mobile-menu">
-                <li class="has-sub"><a href="{{route('home')}}">Inicio</a>
+    <!-- Mobile Menu -->
+    <div class="mobile-nav-wrapper">
+        <div class="mobile-menu-inner">
+            <ul class="mobile-menu">
+                <li class="has-sub"><a href="{{ route('home') }}">Inicio</a>
                     {{-- <ul class="sub-menu">
                     <li><a href="index.html">Standard Posts</a></li>
                     <li><a href="home-recent.html">Recent Posts</a></li>
@@ -61,7 +63,7 @@
                     <li><a href="pages-coming-soon.html">Coming Soon Page</a></li>
                     </ul>
                 </li> --}}
-                <li class="has-sub"><a href="{{route('blog')}}">Blog</a>
+                <li class="has-sub"><a href="{{ route('blog') }}">Blog</a>
                     {{-- <ul class="sub-menu">
                     <li><a href="single-standard-post.html">Standard Post</a></li>
                     <li><a href="single-audio-post.html">Audio Post</a></li>
@@ -73,74 +75,75 @@
                     <li><a href="single-post-without-sidebar.html">Without Sidebar Post</a></li>
                     </ul> --}}
                 </li>
-                <li><a href="{{route('contacto')}}">Contácto</a></li>
-                </ul>
-            </div>
+                <li><a href="{{ route('contacto') }}">Contácto</a></li>
+            </ul>
         </div>
-        <div class="mobile-menu-overlay"></div>
+    </div>
+    <div class="mobile-menu-overlay"></div>
 
-        <!-- Header -->
-        @include('landing.layout.header')
-        <!-- /Header -->
+    <!-- Header -->
+    @include('landing.layout.header')
+    <!-- /Header -->
 
-        <!-- change class -->
-        <div class="change-class"></div>
+    <!-- change class -->
+    <div class="change-class"></div>
 
-        <div id="search">
-            <button type="button" class="close">×</button>
-            <form>
-                <input type="search" value="" placeholder="Buscar..." />
-                <button type="submit" class="primary-button"><i class="icon_search"></i></button>
-            </form>
-        </div>
+    <div id="search">
+        <button type="button" class="close">×</button>
+        <form>
+            <input type="search" value="" placeholder="Buscar..." />
+            <button type="submit" class="primary-button"><i class="icon_search"></i></button>
+        </form>
+    </div>
 
-        @yield('content')
+    @yield('content')
 
-        <div class="instagram-footer">
-            <div class="container">
-                <div class="row">
+    <div class="instagram-footer">
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-12">
                     <div class="instagram-account">
-                    <div class="widget-content">
-                        <div class="widget-header">
-                        <h4><a href="#">@yessitraveling</a></h4>
-                        </div>
-                        <div class="row">
-                        <div class="col-lg-3">
-                            <div class="instagram-item">
-                            <img src="http://placehold.it/255x220" alt="">
+                        <div class="widget-content">
+                            <div class="widget-header">
+                                <h4><a href="https://www.instagram.com/yessitraveling/" target="_blank">@yessitraveling</a></h4>
                             </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="instagram-item">
-                            <img src="http://placehold.it/255x220" alt="">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="instagram-item">
+                                        <img src="http://placehold.it/255x220" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="instagram-item">
+                                        <img src="http://placehold.it/255x220" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="instagram-item">
+                                        <img src="http://placehold.it/255x220" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="instagram-item">
+                                        <img src="http://placehold.it/255x220" alt="">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="instagram-item">
-                            <img src="http://placehold.it/255x220" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="instagram-item">
-                            <img src="http://placehold.it/255x220" alt="">
-                            </div>
-                        </div>
                         </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        @include('landing.layout.footer')
+    @include('landing.layout.footer')
 
-        <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+    <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
 
-        <!-- Scripts -->
-        @include('landing.layout.javascript')
+    <!-- Scripts -->
+    @include('landing.layout.javascript')
 
 
-    </body>
+</body>
+
 </html>

@@ -20,11 +20,12 @@
                                     <div class="down-content">
                                         <h4>{{ $post->title }}</h4>
                                         <ul class="post-info">
-                                            <li><a href="#">{{ $post->created_at->diffForHumans() }}</a></li>
-                                            <li><a href="#">{{ $post->author }}</a></li>
-                                            <li><a href="#">3 Comentarios</a></li>
+                                            <li><a href="javascript:void(0)">{{ $post->created_at->diffForHumans() }}</a></li>
+                                            <li><a href="javascript:void(0)">{{ $post->author }}</a></li>
+                                            <li><a href="javascript:void(0)">{{$post->comments->count()}} Comentarios</a></li>
                                         </ul>
-                                        <p class="first-paragraph">Lorem ipsum dolor amet swag typewriter meditation iceland
+                                        <?php echo $post->body ?>
+                                        {{-- <p class="first-paragraph">Lorem ipsum dolor amet swag typewriter meditation iceland
                                             air plant, direct trade tacos kale chips ugh. Fashion axe single-origin coffee
                                             organic edison bulb prism. Green juice sriracha kogi iceland. Single-origin
                                             coffee leggings gluten-free asymmetrical biodiesel jianbing hoodie crucifix blog
@@ -37,7 +38,7 @@
                                             wolf af, PBRB tacos four loko hoodie chambray. Forage master cleanse kogi vice
                                             salvia flannel deep v. Portland gentrify jean shorts, vaporware umami kale chips
                                             cray shoreditch freegan kickstarter selfies. Migas mumblecore semiotics neutra
-                                            everyday carry green juice dreamcheater vegans model.</p>
+                                            everyday carry green juice dreamcheater vegans model.</p> --}}
                                         <div class="row">
                                             {{-- <div class="col-lg-7 col-md-6">
                                                 <div class="tags">
@@ -173,7 +174,7 @@
                                                     <a href="{{route('post', $posts->slug)}}">
                                                         <div class="left-image">
                                                             <img src="/files/images/{{ $posts->image }}" alt="" width="80" height="80">
-                                                            <span>9</span>
+                                                            <span>{{$posts->comments->count()}}</span>
                                                         </div>
                                                         <div class="right-content">
                                                             <h6>{{$posts->title}}</h6>

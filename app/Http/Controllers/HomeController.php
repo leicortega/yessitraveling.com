@@ -14,9 +14,9 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::paginate(3);
-        $posts_ultimos = Post::orderBy('created_at', 'desc')->get();
-        $cats = Category::orderBy('created_at', 'desc')->get();
-    	return view('landing.index', compact('posts', 'cats'));
+        $posts_ultimos = Post::latest()->take(3)->get();
+        $cats = Category::orderBy('category')->get();
+    	return view('landing.index', compact('posts', 'cats', 'posts_ultimos'));
     	// return view('home.index', compact('posts', 'cats'));
     }
 
